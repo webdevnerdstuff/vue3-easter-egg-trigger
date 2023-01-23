@@ -1,65 +1,67 @@
 {
-  "name": "vue3-ts-easter-egg-trigger",
-  "version": "1.0.0",
-  "description": "This packages makes it nice and easy to add Easter Egg triggers to your Vue site.",
-  "private": false,
-  "type": "module",
-  "scripts": {
-    "watch": "pnpm dev",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)",
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/WebDevNerdStuff"
-    },
-    {
-      "type": "individual",
-      "url": "https://bit.ly/wdns-paypal-veet-plugin"
-    }
-  ],
-  "license": "MIT",
-  "repository": "https://github.com/webdevnerdstuff/vue3-easter-egg-trigger",
-  "bugs": {
-    "url": "https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/issues"
-  },
-  "homepage": "https://github.com/webdevnerdstuff/vue3-easter-egg-trigger",
-  "keywords": [
-    "vue",
-    "vue3",
-    "javascript",
-    "easterEgg",
-    "easter egg",
-    "easter",
-    "egg",
-    "eggs",
-    "eggs",
-    "trigger",
-    "webdevnerdstuff",
-    "wdns"
-  ],
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "vue": "^3.2.45"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.191",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/eslint-config-typescript": "^11.0.2",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.9.0",
-    "prettier": "^2.8.3",
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0",
-    "vue-eslint-parser": "^9.1.0",
-    "vue-tsc": "^1.0.11"
-  }
+	"name": "vue3-ts-easter-egg-trigger",
+	"version": "1.0.0",
+	"description": "This packages makes it nice and easy to add Easter Egg triggers to your Vue site.",
+	"private": false,
+	"typings": "main.d.ts",
+	"scripts": {
+		"watch": "pnpm dev",
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)",
+	"funding": [
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/WebDevNerdStuff"
+		},
+		{
+			"type": "individual",
+			"url": "https://bit.ly/wdns-paypal-veet-plugin"
+		}
+	],
+	"license": "MIT",
+	"repository": "https://github.com/webdevnerdstuff/vue3-easter-egg-trigger",
+	"bugs": {
+		"url": "https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/issues"
+	},
+	"homepage": "https://github.com/webdevnerdstuff/vue3-easter-egg-trigger",
+	"keywords": [
+		"vue",
+		"vue3",
+		"javascript",
+		"easterEgg",
+		"easter egg",
+		"easter",
+		"egg",
+		"eggs",
+		"eggs",
+		"trigger",
+		"webdevnerdstuff",
+		"wdns"
+	],
+	"dependencies": {
+		"lodash": "^4.17.21",
+		"vite-plugin-eslint": "^1.8.1",
+		"vue": "^3.2.45"
+	},
+	"devDependencies": {
+		"@types/lodash": "^4.14.191",
+		"@types/node": "^18.11.18",
+		"@typescript-eslint/eslint-plugin": "^5.48.2",
+		"@typescript-eslint/parser": "^5.48.2",
+		"@vitejs/plugin-vue": "^4.0.0",
+		"@vue/eslint-config-typescript": "^11.0.2",
+		"eslint": "^8.32.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-vue": "^9.9.0",
+		"prettier": "^2.8.3",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0",
+		"vue-eslint-parser": "^9.1.0",
+		"vue-tsc": "^1.0.11"
+	}
 }
