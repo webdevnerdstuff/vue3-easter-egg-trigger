@@ -3,9 +3,11 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <HelloWorld />
+	<div>
+		<img alt="Vue logo" class="logo vue" src="./assets/vue.svg" />
+	</div>
+	<HelloWorld />
 </template>
 
 <style scoped>
-
 </style>

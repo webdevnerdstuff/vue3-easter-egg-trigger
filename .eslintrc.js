@@ -19,7 +19,9 @@ module.exports = {
 			},
 		},
 	],
-	parser: 'vue-eslint-parser',
+	globals: {
+		Entry: true,
+	},
 	parserOptions: {
 		parser: "@typescript-eslint/parser",
 	},
@@ -36,6 +38,8 @@ module.exports = {
 		},
 	},
 	rules: {
+		'@typescript-eslint/no-empty-function': 0,
+		'@typescript-eslint/no-explicit-any': 0,
 		'brace-style': ['error', 'stroustrup'],
 		'default-case': [
 			'error', {
@@ -91,12 +95,30 @@ module.exports = {
 			named: 'never',
 			asyncArrow: 'never',
 		}],
+		'vue/attributes-order': ['error', {
+			'alphabetical': true,
+			'order': [
+				'DEFINITION',
+				'LIST_RENDERING',
+				'CONDITIONALS',
+				'RENDER_MODIFIERS',
+				'GLOBAL',
+				['UNIQUE', 'SLOT'],
+				'TWO_WAY_BINDING',
+				'OTHER_DIRECTIVES',
+				'OTHER_ATTR',
+				'EVENTS',
+				'CONTENT',
+			],
+		}],
 		'vue/html-closing-bracket-newline': 0,
 		'vue/html-indent': 0,
 		'vue/html-self-closing': 0,
 		'vue/max-attributes-per-line': 0,
+		'vue/no-multiple-template-root': 0,
 		'vue/no-template-shadow': 0,
 		'vue/no-v-html': 0,
 		'vue/singleline-html-element-content-newline': 0,
+		'vue/valid-template-root': 0,
 	},
 };

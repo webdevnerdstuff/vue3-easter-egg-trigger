@@ -19,6 +19,9 @@
 			]
 		},
 		"skipLibCheck": true,
+		"typeRoots": [
+			"./ts"
+		],
 		"noEmit": true
 	},
 	"types": [
@@ -26,7 +29,6 @@
 		"node"
 	],
 	"include": [
-		"src/**/*",
 		"src/**/*.ts",
 		"src/**/*.d.ts",
 		"src/**/*.tsx",

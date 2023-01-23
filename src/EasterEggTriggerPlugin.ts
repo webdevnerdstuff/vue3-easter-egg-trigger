@@ -1,6 +1,6 @@
 import type { App } from 'vue';
-import { EasterEggTrigger } from '@/components';
-import { OptionsSettings } from '@/ts/interfaces/global_interface';
+import { EasterEggTrigger } from '@/plugin';
+import { OptionsSettings } from '@/ts/interfaces';
 
 const defaultOptions = {
 	callback: null,

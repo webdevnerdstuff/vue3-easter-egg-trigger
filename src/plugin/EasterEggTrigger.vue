@@ -14,7 +14,7 @@ interface OptionsSettings {
 
 const props = defineProps<OptionsSettings>();
 const emits = defineEmits(['triggered']);
-const pluginOptions: OptionsSettings = inject('defaultOptions');
+const pluginOptions: OptionsSettings = inject("defaultOptions");
 
 let easterEggsTriggerEggs = reactive([]);
 let timeout: ReturnType<typeof setTimeout> = setTimeout(() => { });
@@ -33,7 +33,9 @@ let targets: {
 // Options //
 const defaultEggOptions: OptionsSettings = reactive(props);
 let eggOptions = reactive({ ...defaultEggOptions, ...props });
-eggOptions = filterObject(eggOptions, ([k, v]) => typeof v !== "undefined");
+eggOptions = filterObject(eggOptions, (option) => {
+	return typeof option[1] !== "undefined";
+});
 
 layEggs();
 
@@ -71,7 +73,7 @@ function addListener() {
 
 // Capture the Keys or Click Pattern //
 function capturePattern(e: any) {
-	let key = ref('');
+	const key = ref('');
 
 	if (timeout !== null) {
 		clearTimeout(timeout);
@@ -208,7 +210,7 @@ function rebuild(usedEgg: { name: string; }) {
 // Filter Typescript Object //
 function filterObject<T extends object>(
 	obj: T,
-	fn: (entry: Entry<T>, i: number, arr: Entry<T>[]) => boolean
+	fn: () => boolean
 ) {
 	return Object.fromEntries(
 		(Object.entries(obj) as Entry<T>[]).filter(fn)
