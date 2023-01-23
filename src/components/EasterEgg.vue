@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineEmits, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const containerClass = ref('');
 const emit = defineEmits(['closeEasterEgg']);
