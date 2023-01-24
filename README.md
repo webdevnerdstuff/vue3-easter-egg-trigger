@@ -60,7 +60,7 @@ ex. &#x2191; &#x2191; &#x2193; &#x2193; &#x2190; &#x2192; &#x2190; &#x2192; b a
 
 ```html
 <template>
-	<EasterEggTrigger @triggered="easterEggTriggered" />
+  <EasterEggTrigger @triggered="easterEggTriggered" />
 </template>
 ```
  
@@ -68,20 +68,20 @@ ex. &#x2191; &#x2191; &#x2193; &#x2193; &#x2190; &#x2192; &#x2190; &#x2192; b a
  
 ```html
 <template>
-	<EasterEggTrigger 
-		:pattern="['m', 'a', 'g', 'i', 'c']"
-		@triggered="easterEggTriggered"
-	/>
+  <EasterEggTrigger
+    :pattern="['m', 'a', 'g', 'i', 'c']"
+    @triggered="easterEggTriggered"
+  />
 </template>
 ```
  
 ##### Key Event with Delay (longer time to complete pattern)
 ```html
 <template>
-	<EasterEggTrigger
-		delay="5000"
-		@triggered="easterEggTriggered"
-	/>
+  <EasterEggTrigger
+    delay="5000"
+    @triggered="easterEggTriggered"
+  />
 </template>
 ```
  
@@ -90,7 +90,7 @@ ex. &#x2191; &#x2191; &#x2193; &#x2193; &#x2190; &#x2192; &#x2190; &#x2192; b a
 
 ```html
 <template>
-	<EasterEggTrigger :callback="easterEggTriggered" />
+  <EasterEggTrigger :callback="easterEggTriggered" />
 </template>
 ```
 
@@ -103,20 +103,20 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 
 ```html
 <EasterEggTrigger
-	:pattern="['click']"
-	target="#id-target"
-	type="click"
-	@triggered="easterEggTriggered"
+  :pattern="['click']"
+  target="#id-target"
+  type="click"
+  @triggered="easterEggTriggered"
 />
 ```
  
 #### Mouse Event with multiple clicks required
 ```html
 <EasterEggTrigger
-	:pattern="['click', 'click']"
-	target="#id-target"
-	type="click"
-	@triggered="easterEggTriggered"
+  :pattern="['click', 'click']"
+  target="#id-target"
+  type="click"
+  @triggered="easterEggTriggered"
 />
 ```
  
@@ -124,10 +124,10 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 
 ```html
 <EasterEggTrigger
-	:pattern="['click']"
-	target="h1"
-	type="click"
-	@triggered="easterEggTriggered"
+  :pattern="['click']"
+  target="h1"
+  type="click"
+  @triggered="easterEggTriggered"
 />
 ```
  
@@ -135,10 +135,10 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 
 ```html
 <EasterEggTrigger
-	:pattern="['click']"
-	target="#id-target"
-	type="click"
-	@triggered="easterEggTriggered"
+  :pattern="['click']"
+  target="#id-target"
+  type="click"
+  @triggered="easterEggTriggered"
 />
 ```
  
@@ -146,10 +146,10 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 
 ```html
 <EasterEggTrigger
-	:pattern="['click']"
-	target=".double-click-target"
-	type="click"
-	@triggered="easterEggTriggered"
+  :pattern="['click']"
+  target=".double-click-target"
+  type="click"
+  @triggered="easterEggTriggered"
 />
 ```
  
