@@ -32,7 +32,10 @@ function easterEggTriggered() {
   <EasterEggTrigger @triggered="easterEggTriggered" />
 </template>
 ```
-
+ 
+ #### Demo
+See it in action on the [Demo Page](https://webdevnerdstuff.github.io/vue3-easter-egg-trigger)
+ 
 ### Plugin Props
  
 Name      | Type     | Default    | Description
@@ -152,10 +155,6 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
   @triggered="easterEggTriggered"
 />
 ```
- 
-## Demo
- 
-Coming soon to an animal sanctuary near you.
  
 ## Change Log
 
