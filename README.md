@@ -2,43 +2,52 @@
 Vue 3 Easter Egg Trigger
 -------
 
-tbd
+[![GitHub license](https://img.shields.io/github/license/webdevnerdstuff/vue3-easter-egg-trigger)](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/LICENSE.md)
 
 This packages makes it nice and easy to add Easter Egg triggers to your Vue site.
 
 
 ### Installation
+#### pnpm
+```
+pnpm add vue3-easter-egg-trigger
+```
+#### npm
+```
+npm i vue3-easter-egg-trigger
+```
  
-```
-pnpm add vue-easter-egg-trigger
-```
-
 ## Usage
  
 ```javascript
-tbd
+<script setup>
+import EasterEggTrigger from 'vue3-easter-egg-trigger';
+
+function easterEggTriggered() {
+  // ...do something
+}
+</script>
+
+<template>
+  <EasterEggTrigger @triggered="easterEggTriggered" />
+</template>
 ```
 
-### Plugin Options
+### Plugin Props
  
-Name    | Type    | Default  | Description
-:-----  | :------ | :-----   | :-----
- 
-##### Overriding the plugin default options
- 
-```javascript
-tbd
-```
+Name      | Type     | Default    | Description
+:-----    | :------  | :-----     | :-----
+callback  | Function | null       | The callback function
+delay     | String, Integer | 500 | Determines the timeout before the event listener resets. The longer the delay, the more time a user has to complete the pattern.
+pattern   | Array    | ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'] | The key/click combination a user does to trigger easter egg. The default combination is the konami code.
+target    | String   | body       | Use this to target DOM elements, Id's, or Class Names. Used with click events.
+type      | String   | keydown    | The type of action the trigger will be listening for. Available options: `keydown`, `keyup`, `click`, `dblclick`, `mouseup`, `mousedown`
 
-### Easter Egg Options
+### Events
  
-Name          | Type    | Default     | Description
-:-----        | :------ | :-----      | :-----
-<br>
-
-### Instance Methods
- 
-tbd
+Name    | Type    | Description
+:-----  | :------ | :-----
+triggered | [MouseEvent, KeyboardEvent] | Emitted when the easter egg is triggered.
  
 ## Key Event Examples
  
@@ -49,60 +58,100 @@ ex. &#x2191; &#x2191; &#x2193; &#x2193; &#x2190; &#x2192; &#x2190; &#x2192; b a
 ##### Bare Egg Example.
  
 
-```javascript
-tbd
+```html
+<template>
+	<EasterEggTrigger @triggered="easterEggTriggered" />
+</template>
 ```
-
-##### Key Event with Callback & Bus Emit
  
-
-```javascript
-tbd
+##### Key Event with Custom Pattern
+ 
+```html
+<template>
+	<EasterEggTrigger 
+		:pattern="['m', 'a', 'g', 'i', 'c']"
+		@triggered="easterEggTriggered"
+	/>
+</template>
+```
+ 
+##### Key Event with Delay (longer time to complete pattern)
+```html
+<template>
+	<EasterEggTrigger
+		delay="5000"
+		@triggered="easterEggTriggered"
+	/>
+</template>
 ```
  
 ##### Key Event with Callback only
  
 
-```javascript
-tbd
+```html
+<template>
+	<EasterEggTrigger :callback="easterEggTriggered" />
+</template>
 ```
 
 ## Mouse Event Examples
 
-tbd
+First you will need to set the type prop.
+ 
+Available types of Mouse Events: `click`, `dblclick`, `mouseup`, `mousedown`. 
+When using `dblclick` the pattern will only work with one double click. Ex. pattern: `['dblclick']`
 
-```javascript
-tbd
+```html
+<EasterEggTrigger
+	:pattern="['click']"
+	target="#id-target"
+	type="click"
+	@triggered="easterEggTriggered"
+/>
 ```
  
-##### Mouse Event with Callback & Bus Emit
- 
-
-```javascript
-tbd
+#### Mouse Event with multiple clicks required
+```html
+<EasterEggTrigger
+	:pattern="['click', 'click']"
+	target="#id-target"
+	type="click"
+	@triggered="easterEggTriggered"
+/>
 ```
  
- #####  Mouse Event using a DOM element target
+#####  Mouse Event using a DOM element target
 
-```javascript
-tbd
+```html
+<EasterEggTrigger
+	:pattern="['click']"
+	target="h1"
+	type="click"
+	@triggered="easterEggTriggered"
+/>
 ```
  
  #####  Mouse Event using an ID target
 
-```javascript
-tbd
+```html
+<EasterEggTrigger
+	:pattern="['click']"
+	target="#id-target"
+	type="click"
+	@triggered="easterEggTriggered"
+/>
 ```
  
  #####  Mouse Event using an Class target
 
-```javascript
-tbd
+```html
+<EasterEggTrigger
+	:pattern="['click']"
+	target=".double-click-target"
+	type="click"
+	@triggered="easterEggTriggered"
+/>
 ```
- 
-## More Examples
- 
-You can find more examples in the `tbd` file.
  
 ## Demo
  
@@ -110,7 +159,7 @@ Coming soon to an animal sanctuary near you.
  
 ## Change Log
 
-tbd
+[CHANGELOG](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/CHANGELOG.md)
  
 
 ## License

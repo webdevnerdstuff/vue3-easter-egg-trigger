@@ -1,9 +1,7 @@
 export interface OptionsSettings {
 	callback?: void;
-	delay?: number;
-	keys?: string[];
-	mouseEvents?: string[];
-	pattern?: (string | number)[];
+	delay?: (string | number);
+	pattern?: string[];
 	target?: string;
 	type?: string;
 }

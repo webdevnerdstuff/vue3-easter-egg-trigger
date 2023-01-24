@@ -4,10 +4,8 @@ import { findIndex, includes, isEqual, uniq } from 'lodash';
 
 interface OptionsSettings {
 	callback?: void;
-	delay?: number;
-	keys?: string[];
-	mouseEvents?: string[];
-	pattern?: (string | number)[];
+	delay?: (string | number);
+	pattern?: string[];
 	target?: string;
 	type?: string;
 }
@@ -15,6 +13,12 @@ interface OptionsSettings {
 const props = defineProps<OptionsSettings>();
 const emits = defineEmits(['triggered']);
 const pluginOptions: OptionsSettings = inject("defaultOptions");
+const mouseEvents: string[] = reactive([
+	'click', // Works with multiple single clicks pattern
+	'dblclick', // Only works with single double click pattern set
+	'mouseup', // Works with multiple mouseup clicks pattern
+	'mousedown', // Works with multiple mousedown clicks pattern
+]);
 
 let easterEggsTriggerEggs = reactive([]);
 let timeout: ReturnType<typeof setTimeout> = setTimeout(() => { });
@@ -53,9 +57,12 @@ function callAddListener() {
 	Object.values(easterEggsTriggerEggs).forEach((egg) => {
 		const newEgg = reactive(egg);
 
-		if (!newEgg.keys && !newEgg.pattern) {
-			newEgg.keys = pluginOptions.keys;
+		if (!newEgg.pattern) {
 			newEgg.pattern = pluginOptions.pattern;
+		}
+
+		if (!newEgg.target) {
+			newEgg.target = pluginOptions.target;
 		}
 	});
 
@@ -72,7 +79,7 @@ function addListener() {
 
 
 // Capture the Keys or Click Pattern //
-function capturePattern(e: any) {
+function capturePattern(e: Event) {
 	const key = ref('');
 
 	if (timeout !== null) {
@@ -81,16 +88,11 @@ function capturePattern(e: any) {
 
 	// -------------------- Keyboard Events //
 	if (e.key !== undefined) {
-		// String //
 		key.value = e.key;
-	}
-	else if (e.keyCode !== undefined) {
-		// Fallback Depreciated (Int) //
-		key.value = e.keyCode;
 	}
 
 	// -------------------- Mouse Events //
-	if (includes(pluginOptions.mouseEvents, e.type)) {
+	if (includes(mouseEvents, e.type)) {
 		key.value = e.type;
 
 		targets.nodes.push(e.target.nodeName.toLowerCase());
@@ -106,12 +108,12 @@ function capturePattern(e: any) {
 
 // Check the Keys or Click Pattern //
 function checkPattern(e: Event) {
-	Object.values(easterEggsTriggerEggs).forEach((egg: { keys?: string[], pattern?: string[]; target?: string; }) => {
+	Object.values(easterEggsTriggerEggs).forEach((egg: { pattern?: string[]; target?: string; }) => {
 
 		// Check Keyboard Events //
-		if (isEqual(egg?.keys, input) || isEqual(egg?.pattern, input)) {
+		if (isEqual(egg?.pattern, input)) {
 			// Check Targets if Mouse Events //
-			if (includes(pluginOptions.mouseEvents, e.type)) {
+			if (includes(mouseEvents, e.type)) {
 				checkTarget(e, egg);
 				return false;
 			}
@@ -128,7 +130,7 @@ function checkPattern(e: Event) {
 
 
 // Check Click Targets //
-function checkTarget(e: Event, egg: { keys?: string[], pattern?: string[]; target?: string; }) {
+function checkTarget(e: Event, egg: { pattern?: string[]; target?: string; }) {
 	// Get clean egg target //
 	const node = egg.target;
 	const id = egg.target.replace('#', '');
@@ -155,6 +157,12 @@ function checkTarget(e: Event, egg: { keys?: string[], pattern?: string[]; targe
 
 // Reset //
 function reset() {
+	let delayReset = pluginOptions.delay;
+
+	if (typeof props.delay !== 'undefined') {
+		delayReset = +props.delay;
+	}
+
 	// Reset timeout and clear input keys //
 	timeout = setTimeout(() => {
 		clearTimeout(timeout);
@@ -166,7 +174,7 @@ function reset() {
 			ids: [],
 			classNames: [],
 		};
-	}, pluginOptions.delay);
+	}, delayReset);
 }
 
 
