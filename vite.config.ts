@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
+	base: '/vue3-easter-egg-trigger/',
 	plugins: [
 		eslint({
 			fix: true,
@@ -25,3 +26,12 @@ export default defineConfig({
 		],
 	},
 });
+
+export const assetAttrsConfig: Record<string, string[]> = {
+	link: ['href'],
+	video: ['src', 'poster'],
+	source: ['src', 'srcset'],
+	img: ['src', 'srcset'],
+	image: ['xlink:href', 'href'],
+	use: ['xlink:href', 'href']
+};
