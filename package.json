@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"watch": "pnpm dev",
 		"build": "vite build",
-		"predeploy": "pnpm build",
+		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
 	},
 	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)",
