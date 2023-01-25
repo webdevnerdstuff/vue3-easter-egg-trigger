@@ -1,1 +1,1 @@
-export { default as EasterEggTrigger } from "@/plugin/EasterEggTrigger.vue";
+export { default as EasterEggTrigger } from "@/plugin/EasterEggTriggerPlugin.vue";

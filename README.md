@@ -7,7 +7,7 @@ Vue 3 Easter Egg Trigger
 This packages makes it nice and easy to add Easter Egg triggers to your Vue site.
 
 
-### Installation
+## Installation
 #### pnpm
 ```
 pnpm add vue3-easter-egg-trigger
@@ -17,12 +17,19 @@ pnpm add vue3-easter-egg-trigger
 npm i vue3-easter-egg-trigger
 ```
  
-## Usage
- 
+## Register Plugin
 ```javascript
-<script setup>
+import { createApp } from 'vue';
 import EasterEggTrigger from 'vue3-easter-egg-trigger';
 
+createApp()
+  .use(EasterEggTrigger)
+  .mount('#app');
+```
+ 
+## Usage
+```javascript
+<script setup>
 function easterEggTriggered() {
   // ...do something
 }

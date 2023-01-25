@@ -13,7 +13,7 @@ interface OptionsSettings {
 
 const props = defineProps<OptionsSettings>();
 const emits = defineEmits(['triggered']);
-const pluginOptions: OptionsSettings = inject("defaultOptions");
+const pluginOptions: OptionsSettings = inject('defaultOptions');
 const mouseEvents: string[] = reactive([
 	'click', // Works with multiple single clicks pattern
 	'dblclick', // Only works with single double click pattern set
@@ -39,7 +39,7 @@ let targets: {
 const defaultEggOptions: OptionsSettings = reactive(props);
 let eggOptions = reactive({ ...defaultEggOptions, ...props });
 eggOptions = filterObject(eggOptions, (option) => {
-	return typeof option[1] !== "undefined";
+	return typeof option[1] !== 'undefined';
 });
 
 layEggs();
