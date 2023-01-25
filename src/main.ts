@@ -1,9 +1,9 @@
 import { createApp } from 'vue';
 import '@/style.css';
 import App from '@/App.vue';
-import EasterEggTriggerPlugin from "@/EasterEggTriggerPlugin";
+import EasterEggTrigger from "@/index";
 
 const app = createApp(App);
 
-app.use(EasterEggTriggerPlugin);
+app.use(EasterEggTrigger);
 app.mount("#app");

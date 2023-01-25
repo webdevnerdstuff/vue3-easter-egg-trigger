@@ -1,3 +1,16 @@
+<template>
+	<div
+		id="easter-egg-container"
+		:class="containerClass"
+		@click="closeEasterEgg"
+	>
+		<div class="title">Click screen to close</div>
+		<div class="unicorn-container">
+			<img alt="Farting Unicorns" class="unicorn" src="../assets/unicorn.svg" />
+		</div>
+	</div>
+</template>
+
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
@@ -18,19 +31,6 @@ function closeEasterEgg() {
 	}, 1000);
 }
 </script>
-
-<template>
-	<div
-		id="easter-egg-container"
-		:class="containerClass"
-		@click="closeEasterEgg"
-	>
-		<div class="title">Click screen to close</div>
-		<div class="unicorn-container">
-			<img alt="Farting Unicorns" class="unicorn" src="../assets/unicorn.svg" />
-		</div>
-	</div>
-</template>
 
 <style scoped>
 #easter-egg-container {

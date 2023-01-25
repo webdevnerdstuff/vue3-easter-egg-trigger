@@ -1,6 +1,6 @@
 import type { App } from 'vue';
 import { EasterEggTrigger } from '@/plugin';
-import { OptionsSettings } from '@/ts/interfaces';
+import { OptionSettings } from '@/types';
 
 const defaultOptions = {
 	callback: null,
@@ -12,11 +12,9 @@ const defaultOptions = {
 
 export default {
 	install: (app: App,
-		options: OptionsSettings = defaultOptions) => {
+		options: OptionSettings = defaultOptions) => {
 		app.component('EasterEggTrigger', EasterEggTrigger);
 
 		app.provide("defaultOptions", options);
 	},
 };
-
-export { EasterEggTrigger };

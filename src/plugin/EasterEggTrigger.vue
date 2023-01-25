@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { inject, reactive, ref } from 'vue';
 import { findIndex, includes, isEqual, uniq } from 'lodash';
+import { Entry } from '@/types';
 
 interface OptionsSettings {
 	callback?: void;
@@ -79,7 +80,7 @@ function addListener() {
 
 
 // Capture the Keys or Click Pattern //
-function capturePattern(e: Event) {
+function capturePattern(e: KeyboardEvent) {
 	const key = ref('');
 
 	if (timeout !== null) {
@@ -93,11 +94,12 @@ function capturePattern(e: Event) {
 
 	// -------------------- Mouse Events //
 	if (includes(mouseEvents, e.type)) {
+		const target = e.target as HTMLTextAreaElement;
 		key.value = e.type;
 
-		targets.nodes.push(e.target.nodeName.toLowerCase());
-		targets.ids.push(e.target.id);
-		targets.classNames.push(e.target.classList.value);
+		targets.nodes.push(target.nodeName.toLowerCase());
+		targets.ids.push(target.id);
+		targets.classNames.push(target.classList.value);
 	}
 
 	input.push(key.value);
@@ -174,7 +176,7 @@ function reset() {
 			ids: [],
 			classNames: [],
 		};
-	}, delayReset);
+	}, +delayReset);
 }
 
 
@@ -218,7 +220,8 @@ function rebuild(usedEgg: { name: string; }) {
 // Filter Typescript Object //
 function filterObject<T extends object>(
 	obj: T,
-	fn: () => boolean
+	// eslint-disable-next-line no-unused-vars
+	fn: (entry: Entry<T>, i: number, arr: Entry<T>[]) => boolean
 ) {
 	return Object.fromEntries(
 		(Object.entries(obj) as Entry<T>[]).filter(fn)
