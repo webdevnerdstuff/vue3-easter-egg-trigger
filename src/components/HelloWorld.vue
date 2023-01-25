@@ -47,6 +47,14 @@ function closeEasterEgg() {
 				<img alt="Vue logo" class="logo vue" src="../assets/vue.svg" />
 			</div>
 			<h1>Vue3 Easter Egg Trigger</h1>
+			<a href="https://github.com/webdevnerdstuff/vue3-easter-egg-trigger">
+				<img
+					src="https://img.shields.io/github/package-json/v/webdevnerdstuff/vue3-easter-egg-trigger"
+				/>
+			</a>
+			<h5>
+				by <a href="https://github.com/webdevnerdstuff">WebDevNerdStuff</a>
+			</h5>
 		</header>
 
 		<div class="buttons">
@@ -107,6 +115,13 @@ function closeEasterEgg() {
 </template>
 
 <style scoped>
+h1 {
+	margin-bottom: 10px;
+}
+
+h5 {
+	margin: 0 0 20px 0;
+}
 .buttons {
 	align-items: center;
 	display: flex;

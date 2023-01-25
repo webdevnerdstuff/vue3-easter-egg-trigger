@@ -2,7 +2,7 @@
 Vue 3 Easter Egg Trigger
 -------
 
-[![GitHub license](https://img.shields.io/github/license/webdevnerdstuff/vue3-easter-egg-trigger)](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/LICENSE.md)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/webdevnerdstuff/vue3-easter-egg-trigger) [![GitHub license](https://img.shields.io/github/license/webdevnerdstuff/vue3-easter-egg-trigger)](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/LICENSE.md)
 
 This packages makes it nice and easy to add Easter Egg triggers to your Vue site.
 
