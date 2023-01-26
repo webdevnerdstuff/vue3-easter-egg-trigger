@@ -100,7 +100,7 @@ export default {
 </script>
 
 <template>
-	<EasterEggTrigger @triggered="easterEggTriggered" />
+  <EasterEggTrigger @triggered="easterEggTriggered" />
 </template>;
 ```
 ## Usage
