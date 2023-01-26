@@ -28,6 +28,9 @@ export default defineConfig({
 	build: {
 		outDir: 'docs',
 	},
+	server: {
+		open: true,
+	},
 });
 
 export const assetAttrsConfig: Record<string, string[]> = {
