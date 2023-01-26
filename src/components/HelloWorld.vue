@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { markRaw, ref } from 'vue';
-// import { EasterEggTrigger } from '@/plugin';
 import EasterEgg from '@/components/EasterEgg.vue';
 
 const activeEasterEgg = ref(null);
@@ -9,8 +8,6 @@ const clickClassTriggered = ref(false);
 const clickIdTriggered = ref(false);
 const dblclickTriggered = ref(false);
 const konamiTriggeredClass = ref('');
-
-
 
 function triggered(el) {
 	if (el === 'clicked-id') {

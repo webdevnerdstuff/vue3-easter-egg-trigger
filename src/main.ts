@@ -6,5 +6,4 @@ import EasterEggTrigger from "@/index";
 const app = createApp(App);
 
 app.use(EasterEggTrigger);
-// app.component('EasterEggTrigger', EasterEggTrigger);
 app.mount("#app");

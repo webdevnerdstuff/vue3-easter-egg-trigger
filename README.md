@@ -17,7 +17,8 @@ pnpm add vue3-easter-egg-trigger
 npm i vue3-easter-egg-trigger
 ```
  
-## Register Plugin
+## Register
+#### As Plugin (Global)
 ```javascript
 import { createApp } from 'vue';
 import EasterEggTrigger from 'vue3-easter-egg-trigger';
@@ -27,9 +28,22 @@ createApp()
   .mount('#app');
 ```
  
-## Usage
+#### As Component (Global)
+```javascript
+import { createApp } from 'vue';
+import EasterEggTrigger from 'vue3-easter-egg-trigger';
+
+createApp()
+  .component('EasterEggTrigger', EasterEggTrigger)
+  .mount('#app');
+```
+ 
+#### As Component (Local)
+##### Composition API
 ```javascript
 <script setup>
+import { EasterEggTrigger } from 'vue3-easter-egg-trigger';
+
 function easterEggTriggered() {
   // ...do something
 }
@@ -39,6 +53,57 @@ function easterEggTriggered() {
   <EasterEggTrigger @triggered="easterEggTriggered" />
 </template>
 ```
+ 
+```javascript
+<script>
+import { EasterEggTrigger } from 'vue3-easter-egg-trigger';
+
+export default {
+  components: {
+    EasterEggTrigger,
+  },
+  setup() {
+    function easterEggTriggered() {
+      // ...do something
+    }
+
+    return {
+      easterEggTriggered,
+    };
+  },
+};
+</script>
+
+<template>
+  <EasterEggTrigger @triggered="easterEggTriggered" />
+</template>
+
+```
+##### Options API
+```javascript
+<script>
+import { EasterEggTrigger } from 'vue3-easter-egg-trigger';
+
+export default {
+  components: {
+    EasterEggTrigger,
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    easterEggTriggered() {
+      // ...do something
+    },
+  },
+};
+</script>
+
+<template>
+	<EasterEggTrigger @triggered="easterEggTriggered" />
+</template>;
+```
+## Usage
  
  #### Demo
 See it in action on the [Demo Page](https://webdevnerdstuff.github.io/vue3-easter-egg-trigger)
@@ -59,7 +124,7 @@ Name    | Type    | Description
 :-----  | :------ | :-----
 triggered | [MouseEvent, KeyboardEvent] | Emitted when the easter egg is triggered.
  
-## Key Event Examples
+## Keyboard Event Examples
  
 The default key combination to trigger the easter egg is the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code).
  
@@ -69,39 +134,31 @@ ex. &#x2191; &#x2191; &#x2193; &#x2193; &#x2190; &#x2192; &#x2190; &#x2192; b a
  
 
 ```html
-<template>
-  <EasterEggTrigger @triggered="easterEggTriggered" />
-</template>
+<EasterEggTrigger @triggered="easterEggTriggered" />
 ```
  
-##### Key Event with Custom Pattern
+##### Custom Pattern
  
 ```html
-<template>
-  <EasterEggTrigger
-    :pattern="['m', 'a', 'g', 'i', 'c']"
-    @triggered="easterEggTriggered"
-  />
-</template>
+<EasterEggTrigger
+  :pattern="['m', 'a', 'g', 'i', 'c']"
+  @triggered="easterEggTriggered"
+/>
 ```
  
-##### Key Event with Delay (longer time to complete pattern)
+##### Delay (longer time to complete pattern)
 ```html
-<template>
-  <EasterEggTrigger
-    delay="5000"
-    @triggered="easterEggTriggered"
-  />
-</template>
+<EasterEggTrigger
+  delay="5000"
+  @triggered="easterEggTriggered"
+/>
 ```
  
-##### Key Event with Callback only
+##### Callback
  
 
 ```html
-<template>
-  <EasterEggTrigger :callback="easterEggTriggered" />
-</template>
+<EasterEggTrigger :callback="easterEggTriggered" />
 ```
 
 ## Mouse Event Examples
@@ -120,7 +177,7 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 />
 ```
  
-#### Mouse Event with multiple clicks required
+#### Multiple clicks required
 ```html
 <EasterEggTrigger
   :pattern="['click', 'click']"
@@ -130,7 +187,7 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 />
 ```
  
-#####  Mouse Event using a DOM element target
+#####  DOM element target
 
 ```html
 <EasterEggTrigger
@@ -141,7 +198,7 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 />
 ```
  
- #####  Mouse Event using an ID target
+ #####  ID target
 
 ```html
 <EasterEggTrigger
@@ -152,7 +209,7 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 />
 ```
  
- #####  Mouse Event using an Class target
+ #####  Class target
 
 ```html
 <EasterEggTrigger

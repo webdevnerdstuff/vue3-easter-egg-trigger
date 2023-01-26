@@ -3,15 +3,16 @@
 	"version": "1.0.0",
 	"description": "This packages makes it nice and easy to add Easter Egg triggers to your Vue3 site.",
 	"private": false,
-	"main": "bundle/cjs/vue3-easter-egg-trigger.js",
-	"module": "bundle/es/vue3-easter-egg-trigger.js",
+	"main": "dist/vue3-easter-egg-trigger.js",
+	"module": "dist/vue3-easter-egg-trigger.es.js",
+	"types": "dist/plugin/EasterEggTriggerPlugin.d.ts",
 	"scripts": {
 		"dev": "vite",
 		"watch": "pnpm dev",
 		"bundle": "rollup -c --bundleConfigAsCjs",
 		"build": "vite build",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d docs"
 	},
 	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)",
 	"funding": [

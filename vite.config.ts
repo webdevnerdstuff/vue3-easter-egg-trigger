@@ -25,6 +25,9 @@ export default defineConfig({
 			'.vue',
 		],
 	},
+	build: {
+		outDir: 'docs',
+	},
 });
 
 export const assetAttrsConfig: Record<string, string[]> = {
