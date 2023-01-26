@@ -1,12 +1,26 @@
 
-Vue 3 Easter Egg Trigger
--------
+<p align="center">
+  <img alt="Vuetify Logo" width="100" src="https://webdevnerdstuff.github.io/vue3-easter-egg-trigger/vue.svg">
+</p>
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/webdevnerdstuff/vue3-easter-egg-trigger) [![GitHub license](https://img.shields.io/github/license/webdevnerdstuff/vue3-easter-egg-trigger)](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/LICENSE.md)
+<p>
+  <h1 align="center">Vue 3 Easter Egg Trigger</h1>
+</p>
 
-This packages makes it nice and easy to add Easter Egg triggers to your Vue site.
+<p align="center">
+  <a href="https://www.npmjs.com/package/vue3-easter-egg-trigger">
+    <img src="https://img.shields.io/npm/v/vue3-easter-egg-trigger?color=1867c0&logo=npm" alt="NPM Package">
+  </a>
+  &nbsp;
+  <a href="https://github.com/webdevnerdstuff/vue3-easter-egg-trigger">
+    <img src="https://img.shields.io/badge/GitHub-WebDevNerdStuff-brightgreen.svg?logo=github" alt="@WebDevNerdStuff">
+  </a>
+</p>
 
+## Description
 
+The `vue3-easter-egg-trigger` component makes it nice and easy to add Easter Egg triggers to your Vue site.
+ 
 ## Installation
 #### pnpm
 ```
@@ -224,10 +238,9 @@ When using `dblclick` the pattern will only work with one double click. Ex. patt
 
 [CHANGELOG](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/CHANGELOG.md)
  
-
 ## License
 
 Copyright (c) 2022 WebDevNerdStuff
 Licensed under the MIT license.
 
-[![@WebDevNerdStuff](https://img.shields.io/badge/github-webdevnerdstuff-brightgreen.svg)](https://github.com/webdevnerdstuff)
+[![GitHub license](https://img.shields.io/github/license/webdevnerdstuff/vue3-easter-egg-trigger)](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/LICENSE.md) [![@WebDevNerdStuff](https://img.shields.io/badge/github-webdevnerdstuff-brightgreen.svg)](https://github.com/webdevnerdstuff)
