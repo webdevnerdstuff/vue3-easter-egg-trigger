@@ -45,12 +45,22 @@ function closeEasterEgg() {
 			<div>
 				<img alt="Vue logo" class="logo vue" src="../assets/vue.svg" />
 			</div>
-			<h1>Vue3 Easter Egg Trigger</h1>
-			<a href="https://github.com/webdevnerdstuff/vue3-easter-egg-trigger">
+			<h1>Vue 3 Easter Egg Trigger</h1>
+
+			<a href="https://www.npmjs.com/package/vue3-easter-egg-trigger">
 				<img
-					src="https://img.shields.io/github/package-json/v/webdevnerdstuff/vue3-easter-egg-trigger"
+					alt="NPM Package"
+					src="https://img.shields.io/npm/v/vue3-easter-egg-trigger?color=1867c0&logo=npm"
 				/>
 			</a>
+			&nbsp;
+			<a href="https://github.com/webdevnerdstuff/vue3-easter-egg-trigger">
+				<img
+					alt="@WebDevNerdStuff"
+					src="https://img.shields.io/badge/GitHub-WebDevNerdStuff-brightgreen.svg?logo=github"
+				/>
+			</a>
+
 			<h5>
 				by <a href="https://github.com/webdevnerdstuff">WebDevNerdStuff</a>
 			</h5>
