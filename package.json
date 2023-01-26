@@ -13,7 +13,7 @@
 		"build": "vite build",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d docs",
-		"prepublish": "pnpm run bundle",
+		"prepublish": "npm run bundle",
 		"publish": "npm publish --access public"
 	},
 	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)",
