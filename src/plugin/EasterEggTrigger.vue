@@ -1,11 +1,11 @@
 <script lang="ts">
-import { defineComponent, reactive, ref } from "vue";
+import { defineComponent, reactive, ref } from 'vue';
 import { findIndex, includes, isEqual, uniq } from 'lodash';
 import { Entry } from '@/types';
 
 
 export default defineComponent({
-	name: "EasterEggTrigger",
+	name: 'EasterEggTrigger',
 	props: {
 		callback: {
 			default: null as void,

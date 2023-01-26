@@ -25,19 +25,19 @@ export default {
 	output: [
 		{
 			exports: 'named',
-			file: `bundle/cjs/${pkg.name}.js`,
+			file: `dist/${pkg.name}.js`,
 			format: 'cjs',
 			banner,
 		},
 		{
 			exports: 'named',
-			file: `bundle/es/${pkg.name}.js`,
+			file: `dist/${pkg.name}.es.js`,
 			format: 'es',
 			banner,
 		},
 	],
 	external: [
-		...Object.keys(pkg.dependencies || {}),
+		...Object.keys(pkg.peerDependencies || {}),
 	],
 	plugins: [
 		json(),
