@@ -1,6 +1,6 @@
 /**
  * @name vue3-easter-egg-trigger
- * @version 1.0.0
+ * @version 1.0.1
  * @description This packages makes it nice and easy to add Easter Egg triggers to your Vue3 site.
  * @author WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)
  * @copyright Copyright 2023, WebDevNerdStuff
