@@ -9,53 +9,37 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
   - type: textarea
-    id: what-happened
+    id: bug-description
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Bug description
+      description: What happened?
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
+    id: steps
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.1 (Default)
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
+      placeholder:  "Steps to reproduce the behavior:\n1. Go to '...'\n2. Click on '....'\n3. Scroll down to '....'\n4. See error"
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Chrome
-        - Firefox
-        - Microsoft Edge
-        - Safari
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: If applicable, please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/webdevnerdstuff/vue3-easter-egg-trigger/blob/main/CODE_OF_CONDUCT.md)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
