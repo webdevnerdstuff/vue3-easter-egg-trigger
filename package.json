@@ -14,9 +14,7 @@
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d docs",
 		"prepublishOnly": "npm run bundle",
-		"lint": "eslint src/**/**/*.{ts,vue}",
-		"lint:fix": "eslint --fix src/**/*.{ts,vue}",
-		"prepare": "husky install"
+		"lint": "eslint src/**/**/*.{ts,vue}"
 	},
 	"husky": {
 		"hooks": {
