@@ -38,6 +38,15 @@ module.exports = {
 		},
 	},
 	rules: {
+		"@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
 		'@typescript-eslint/no-empty-function': 0,
 		'brace-style': ['error', 'stroustrup'],
 		'default-case': [
