@@ -14,16 +14,12 @@
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d docs",
 		"prepublishOnly": "npm run bundle",
-		"lint": "eslint src/**/**/*.{ts,vue}"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+		"lint": "eslint src/**/*.{ts,vue} --max-warnings 4"
 	},
 	"lint-staged": {
-		"*.{js,vue,ts}": [
-			"npm run lint-arg --"
+		"src/**/*.{js,ts,vue}": [
+			"prettier --write",
+			"npm run lint"
 		]
 	},
 	"author": "WebDevNerdStuff & Bunnies... lots and lots of bunnies! <webdevnerdstuff@gmail.com> (https://webdevnerdstuff.com)",
