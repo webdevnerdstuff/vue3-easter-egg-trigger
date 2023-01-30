@@ -38,6 +38,15 @@ module.exports = {
 		},
 	},
 	rules: {
+		"@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
 		'@typescript-eslint/no-empty-function': 0,
 		'brace-style': ['error', 'stroustrup'],
 		'default-case': [
@@ -56,6 +65,7 @@ module.exports = {
 		'max-len': 0,
 		'no-else-return': ['error', { allowElseIf: true }],
 		'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+		'no-const-assign': 'error',
 		'no-debugger': 0,
 		'no-new': 0,
 		'no-unused-vars': 1,
