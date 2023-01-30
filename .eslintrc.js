@@ -65,6 +65,7 @@ module.exports = {
 		'max-len': 0,
 		'no-else-return': ['error', { allowElseIf: true }],
 		'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+		'no-const-assign': 'error',
 		'no-debugger': 0,
 		'no-new': 0,
 		'no-unused-vars': 1,
