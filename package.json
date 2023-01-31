@@ -18,7 +18,6 @@
 	},
 	"lint-staged": {
 		"src/**/*.{js,ts,vue}": [
-			"prettier --write",
 			"npm run lint"
 		]
 	},
