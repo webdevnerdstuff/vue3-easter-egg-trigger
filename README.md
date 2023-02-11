@@ -19,7 +19,7 @@
 
 ## Description
 
-The `vue3-easter-egg-trigger` component makes it nice and easy to add Easter Egg triggers to your Vue site. Also available for Vue 2 at [vue2-easter-egg-trigger](https://github.com/webdevnerdstuff/vue2-easter-egg-trigger).
+The `vue3-easter-egg-trigger` component makes it nice and easy to add Easter Egg triggers to your Vue site. Also available for Vue 2 at [vue2-easter-egg-trigger](https://github.com/webdevnerdstuff/vue-easter-egg-trigger).
  
 ## Installation
 #### pnpm
