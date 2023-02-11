@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img alt="Vuetify Logo" width="100" src="https://webdevnerdstuff.github.io/vue3-easter-egg-trigger/vue.svg">
+  <img alt="Vue Logo" width="100" src="https://webdevnerdstuff.github.io/vue3-easter-egg-trigger/vue.svg">
 </p>
 
 <p>
@@ -19,7 +19,7 @@
 
 ## Description
 
-The `vue3-easter-egg-trigger` component makes it nice and easy to add Easter Egg triggers to your Vue site.
+The `vue3-easter-egg-trigger` component makes it nice and easy to add Easter Egg triggers to your Vue site. Also available for Vue 2 at [vue2-easter-egg-trigger](https://github.com/webdevnerdstuff/vue2-easter-egg-trigger).
  
 ## Installation
 #### pnpm
