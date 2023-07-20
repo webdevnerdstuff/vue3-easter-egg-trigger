@@ -43,10 +43,10 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onTriggered?: (...args: any[]) => any;
 }, {
-    callback: Function;
-    delay: string | number;
     pattern: unknown[];
+    callback: Function;
     target: string;
     type: string;
-}>;
+    delay: string | number;
+}, {}>;
 export default _default;
