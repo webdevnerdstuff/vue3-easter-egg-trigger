@@ -1,6 +1,6 @@
 {
 	"name": "vue3-easter-egg-trigger",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "This packages makes it nice and easy to add Easter Egg triggers to your Vue3 site.",
 	"private": false,
 	"main": "dist/vue3-easter-egg-trigger.cjs.js",
